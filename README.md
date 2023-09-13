@@ -7,7 +7,15 @@ Make a venv for the server
 * cd myproject
 * py -3 -m venv .venv
 
-To install flask type: pip install Flask
+To install flask type: pip3 install Flask
+
+If you get a error in vscode on windows run:  Set-ExecutionPolicy RemoteSigned
+
+turn on  .venv\Scripts\activate
+
 
 #theirs a flask and django framework
 https://www.djangoproject.com/
+
+To run the server
+flask --app server/web_server run
