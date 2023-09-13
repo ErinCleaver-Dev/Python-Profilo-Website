@@ -19,3 +19,5 @@ https://www.djangoproject.com/
 
 To run the server
 flask --app server/web_server run
+
+#css needs to go in a static folder.  The folder should be static/style
