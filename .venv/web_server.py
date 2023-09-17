@@ -10,17 +10,19 @@ app = Flask(__name__)
 def hello_world():
     return render_template('index.html')
 
-# uses the first route
-@app.route('/about')
-def about():
-    return render_template('about.html')
-# can provide a veriable information
-# needs a user name now
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 
 @app.route('/work')
 def work():
     return render_template('work.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+    
 @app.route('/work/todo')
 def todo():
     return render_template('/work/todo.html')
