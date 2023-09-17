@@ -17,8 +17,11 @@ def about():
 # can provide a veriable information
 # needs a user name now
 
-@app.route('/blog/<username>/<int:post_id>')
-def blog(username=None, post_id=None):
+@app.route('/work')
+def work():
+    return render_template('work.html')
 
-    return render_template('blog.html', name=username, post_id=post_id)
+@app.route('/work/todo')
+def todo():
+    return render_template('/work/todo.html')
 

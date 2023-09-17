@@ -18,7 +18,7 @@ turn on  .venv\Scripts\activate
 https://www.djangoproject.com/
 
 To run the server
-flask --app server/web_server run
+flask --app web_server run
 
 #css needs to go in a static folder.  The folder should be static/style
 # this allows you to use python code inside of a html file in flask

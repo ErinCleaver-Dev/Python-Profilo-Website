@@ -1,3 +1,13 @@
 body {
-    background-color: lightblue;
+    background-color: rgb(211, 211, 211);
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem !important;
+    border: 3px solid white !important;
+}
+
+.navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
