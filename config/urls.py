@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import profilo.views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', profilo.views.index),
+    path('/work', profilo.views.work),
+    path('/work/todo', profilo.views.todo),
+    path('/contact', profilo.views.contact)
 ]
