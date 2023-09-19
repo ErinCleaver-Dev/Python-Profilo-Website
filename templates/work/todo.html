@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}To Do{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+<div><h1>To Do</h1></div>
+
+<div>
+<form class="row g-3" method='POST' role="form">
+    <div class="col-auto">
+        <label for="todo" class="col-form-label">To do</label>
+    </div>
+    <div class="col-auto">
+        <input name="todo" type="text" id="todo" class="form-control" value="{{request.form['todo']}}" aria-describedby="passwordHelpInline">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3">Add</button>
+    </div>
+</div>
+</form>
+<div>
+    <div class="col-auto">
+        <a href="{{ url_for('delete_complated') }}" type="button" class="btn btn-primary mb-3">Delete Completed</a>
+    </div>
+    <div class="col-auto">
+        <a href="{{ url_for('delete_all') }}" type="button" class="btn btn-primary mb-3">Delete All</a>
+    </div>
+</div>
+    <ul class="list-group list-group-flush">
+    {% for todo in todo_list %}
+        <a class="formated_link" href="{{ url_for('complete', oid=todo._id) }}">
+            <li class="list-group-item {% if todo.complete %}todo_completed{% endif %}">{{ todo.text }}</li>
+        </a>
+
+    {% endfor %}
+    </ul>
+
+{% endblock %}
